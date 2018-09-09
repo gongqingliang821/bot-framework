@@ -23,6 +23,6 @@ if(isset($_SERVER['HTTP_SAIYALOGID'])){
 }
 //设置日志级别
 
-DB::init("mysql:host=10.95.31.38;dbname=dumi_openplat_db;port=5555",'edurd_wr','hsilgne');
+DB::init("mysql:host=xx.xx.xx.xx;dbname=db_name;port=1234",'zhanghao','mima');
 
 Logger::info('hahhahha');
