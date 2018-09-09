@@ -14,5 +14,9 @@ composer require bot/bot-framework dev-master
 ```shell
 cd vendor/bot/bot-framework/src && php webroot/install.php生成数据库相关的orm
 ```
+
+## 配置 
+nginx配置vendor/bot/bot-framework/src/webroot/route.php
+
 ## demo 
-vendor/bot/bot-framework/src/app/controller目录下KaishuController.class.php
+参考vendor/bot/bot-framework/src/app/controller目录下KaishuController.class.php

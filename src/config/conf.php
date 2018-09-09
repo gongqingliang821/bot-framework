@@ -8,10 +8,10 @@ if (file_exists(ROOT_PATH.'/DEBUG')){
     ini_set('track_errors', true);
     ini_set("display_errors", "On");
     ini_set('error_reporting', E_ALL & ~E_NOTICE);
-    Logger::setLevel(PLogger::DEBUG, ['level'=>PLogger::INFO,'path'=>LOG_PATH."/uilog/",'in_line'=>true,'file_prefix'=>'ui']);
+    Logger::setLevel(PLogger::DEBUG, ['level'=>PLogger::INFO,'path'=>LOG_PATH,'in_line'=>true,'file_prefix'=>'bot']);
 } else {
     $IS_DEBUG = false;
-    Logger::setLevel(PLogger::INFO, ['level'=>PLogger::INFO,'path'=>LOG_PATH."/uilog/",'in_line'=>true,'file_prefix'=>'ui']);
+    Logger::setLevel(PLogger::INFO, ['level'=>PLogger::INFO,'path'=>LOG_PATH,'in_line'=>true,'file_prefix'=>'bot']);
 }
 
 
@@ -21,8 +21,6 @@ if(isset($_SERVER['HTTP_SAIYALOGID'])){
 }else{
     define('LOG_ID', ''.time().mt_rand(1000, 10000));
 }
-//设置日志级别
 
 DB::init("mysql:host=xx.xx.xx.xx;dbname=db_name;port=1234",'zhanghao','mima');
 
-Logger::info('hahhahha');
