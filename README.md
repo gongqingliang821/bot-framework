@@ -18,5 +18,16 @@ cd vendor/bot/bot-framework/src && php webroot/install.php生成数据库相关�
 ## 配置 
 nginx配置vendor/bot/bot-framework/src/webroot/route.php
 
+## 数据库配置 
+修改vendor/bot/bot-framework/src/config/conf.php中
+```shell
+DB::init("mysql:host=10.95.31.38;dbname=dumi_openplat_db;port=5555",'edurd_wr','hsilgne');
+```
+
 ## demo 
-参考vendor/bot/bot-framework/src/app/controller目录下KaishuController.class.php
+参考vendor/bot/bot-framework/src/app/controller目录下KaishuController.class.php,访问地址:
+```shell
+http://127.0.0.0:8704/kaishu
+```
+
+
