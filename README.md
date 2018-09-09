@@ -5,14 +5,14 @@ php封装的bot开发框架，主要功能如下：
 * 简易的orm框架，可支持mysql和sqlite（基于pdo_mysql和pdo_sqlite）
 * 简易的mvc
 
-##安装 
+## 安装 
 ```shell
 composer require bot/bot-framework dev-master
 ```
 
-##生成数据库orp
+## 生成数据库orp
 ```shell
 cd vendor/bot/bot-framework/src && php webroot/install.php生成数据库相关的orm
 ```
-##demo
+## demo 
 vendor/bot/bot-framework/src/app/controller目录下KaishuController.class.php
