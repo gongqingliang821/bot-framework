@@ -1,0 +1,21 @@
+{
+    "name": "dueros/bot-framework",
+    "type": "library" ,
+    "description": "度秘bot开发的web框架",
+    "keywords": ["duer","bot-framework"],
+    "require": {
+        "php": ">=5.4.0",
+        "dueros/bot-sdk": "^2.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name" : "gongqingliang",
+            "email": "gongqingliang@baidu.com",
+            "role":"Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Baidu\\Duer\\Bot-Framework\\": "src/" }
+    }
+}
