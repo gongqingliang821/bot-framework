@@ -1,5 +1,5 @@
 {
-    "name": "dueros/bot-framework",
+    "name": "bot/bot-framework",
     "type": "library" ,
     "description": "度秘bot开发的web框架",
     "keywords": ["duer","bot-framework"],
