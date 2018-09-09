@@ -1,6 +1,5 @@
 <?php
-require_once 'vendor/autoload.php';
-class BaseController extends \Baidu\Duer\Botsdk\Bot
+class BaseController
 {
     protected $result;
     protected $status = 200;
