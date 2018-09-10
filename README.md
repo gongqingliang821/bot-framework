@@ -21,7 +21,7 @@ nginx配置vendor/bot/bot-framework/src/webroot/route.php
 ## 数据库配置 
 修改vendor/bot/bot-framework/src/config/conf.php中
 ```shell
-DB::init("mysql:host=10.95.31.38;dbname=dumi_openplat_db;port=5555",'edurd_wr','hsilgne');
+DB::init("mysql:host=xx.xx.xx.xx;dbname=xx;port=xx",'xx','xx');
 ```
 
 ## demo 
