@@ -1,5 +1,5 @@
 <?php
-require '../../../../../vendor/autoload.php';
+require WEB_PATH . '/vendor/autoload.php';
 class BaseBotController extends Baidu\Duer\Botsdk\Bot
 {
     public function process()
