@@ -5,9 +5,11 @@ class UrlMapper
     private $controller;
     private $action;
     private $method;
-    public function __construct($url)
+    private $appPath;
+    public function __construct($appPath, $url)
     {
         $this->url = trim($url," \t\n/");
+        $this->appPath = $appPath;
         $this->controller=$this->getController();
         if(! method_exists($this->controller,"indexAction")){
             throw new SystemException("no match method: $url", 404);
@@ -21,8 +23,7 @@ class UrlMapper
         {
             return $this->controller;
         }
-
-        $classFile = ROOT_PATH . '/app/controller/' . ucfirst($this->url) . 'Controller.class.php';
+        $classFile = $this->appPath . '/controller/' . ucfirst($this->url) . 'Controller.class.php';
         if (file_exists($classFile)){
             require_once($classFile);
             $controllerClass=ucfirst($this->url."Controller");

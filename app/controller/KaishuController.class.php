@@ -18,9 +18,10 @@ class KaishuController extends BaseBotController{
          //$botInfo = array_map(function($t) {
          //       return $t->getData();
          //    }, $botInfo);
+         
+         $botInfo=DB::query("select * from bot_info where bot_id=?", $botId);
          Logger::warn('test warn');
          Logger::info('test info');
-         $botInfo=DB::query("select * from bot_info where bot_id=?", $botId);
          $this->addLaunchHandler(function () {
              $directive = new Play('http://wwww');
              return [

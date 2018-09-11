@@ -1,7 +1,10 @@
 <?php
 //生成表结构
-define('ROOT_PATH', getcwd());
-require (ROOT_PATH."/config/conf.php");
+#require ('/home/work/gongqingliang/bot-test/vendor/bot/bot-framework/src/config/classpath.php');
+define('ROOT_PATH', getcwd() . '/vendor/bot/bot-framework/src');
+require (ROOT_PATH. '/config/classpath.php');
+require (getcwd() . "/config/conf.php");
+//require ("/home/work/gongqingliang/bot-test/config/conf.php");
 $tables=array_slice($argv,1);
 if(!$tables){
     $tables=DBTool::showTables();
@@ -14,7 +17,7 @@ foreach ($tables as $table){
     $className=array_pop($paths);
     $namespaces=implode("\\",$paths);
     $fileName=$className.".class.php";
-    $realpath=ROOT_PATH."/app/".implode("/",$paths);
+    $realpath=getcwd() . "/app/".implode("/",$paths);
     @mkdir($realpath,0777,true);
     $modelTemplate->assign('fields',$fields);
     $modelTemplate->assign('table',$table);
@@ -61,7 +64,7 @@ foreach ($tables as $table){
     $className=array_pop($paths);
     $namespaces=implode("\\",$paths);
     $fileName=$className.".class.php";
-    $realpath=ROOT_PATH."/app/".implode("/",$paths);
+    $realpath=getcwd() . "/app/".implode("/",$paths);
     @mkdir($realpath,0777,true);
     
     foreach($fields as $i=>$field){
