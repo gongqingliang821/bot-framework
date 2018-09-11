@@ -12,7 +12,7 @@ composer require bot/bot-framework dev-master
 
 ## 生成数据库orp
 ```shell
-php vendor/bot/bot-framework/src/webroot/Install.php 生成数据库相关的orm,在app下新建个controller目录,指定bot路由的controller,例如凯叔bot的control路由是KaishuController.php
+php vendor/bot/bot-framework/init.php config目录及index.php,在app下新建个controller目录,指定bot路由的controller,例如凯叔bot的control路由是KaishuController.php
 ```
 
 ## 数据库配置 
@@ -20,6 +20,12 @@ config/conf.php中,修改数据库配置
 ```shell
 DB::init("mysql:host=xx.xx.xx.xx;dbname=xx;port=xx",'xx','xx');
 ```
+
+## 生成数据库orp 
+php vendor/bot/bot-framework/src/webroot/Install.php
+
+## 编写controller
+在app下新建个controller目录,指定bot路由的controller,例如凯叔bot的control路由是KaishuController.php
 
 ## 配置nginx
 nginx配置index.php
