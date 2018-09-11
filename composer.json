@@ -16,6 +16,6 @@
         }
     ],
     "autoload": {
-        "psr-4": { "Baidu\\Duer\\Bot-Framework\\": "src/" }
+        "psr-4": { "Bot\\Framework\\": "src/" }
     }
 }

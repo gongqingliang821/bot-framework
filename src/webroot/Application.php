@@ -1,4 +1,5 @@
 <?php
+namespace Bot\Framework\Application;
 class Application{
     private $appPath;
     public function __construct($configPath, $appPath){
