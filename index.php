@@ -1,9 +1,12 @@
 <?php
 define('WEB_PATH', dirname(__FILE__));
-require(__DIR__ . '/vendor/bot/bot-framework/src/config/classpath.php');
-require(__DIR__ . '/vendor/bot/bot-framework/src/webroot/Application.php');
+require 'vendor/bot/bot-framework/src/webroot/index.php';
+/*$app = new Application([
+        'configpath' = '',
+       'apppath'=>'', 
+] $const);*/
 $configPath = __DIR__ . '/config/conf.php';
-$application = new Application($configPath);
 $appPath = __DIR__ .'/app';
-$application->run($appPath);
+$application = new Application($configPath, $appPath);
+$application->run();
 

@@ -8,4 +8,5 @@ if(isset($_SERVER['HTTP_SAIYALOGID'])){
 }else{
     define('LOG_ID', ''.time().mt_rand(1000, 10000));
 }
-DB::init("mysql:host=xx.xx.xx.xx;dbname=db_name;port=xxxx",'账号','密码');
+DB::init("mysql:host=xx.xx.xx.xx;dbname=db_name;port=端口",'账号','密码');
+

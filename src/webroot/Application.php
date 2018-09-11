@@ -1,13 +1,15 @@
 <?php
 class Application{
-    public function __construct($configPath){
+    private $appPath;
+    public function __construct($configPath, $appPath){
         require($configPath);
+        $this->appPath = $appPath;
     }
 
-    public function run($appPath){
+    public function run(){
         try
         {
-            $mapper = new UrlMapper($appPath, $_SERVER['SCRIPT_NAME']);
+            $mapper = new UrlMapper($this->appPath, $_SERVER['SCRIPT_NAME']);
             WinRequest::setAttribute("mapper", $mapper);
             $controller = $mapper->getController();
             $output = $controller->process();
