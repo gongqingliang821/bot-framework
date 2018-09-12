@@ -1,12 +1,9 @@
 <?php
 define('WEB_PATH', dirname(__FILE__));
-require 'vendor/bot/bot-framework/src/webroot/index.php';
-/*$app = new Application([
-        'configpath' = '',
-       'apppath'=>'', 
-] $const);*/
-$configPath = __DIR__ . '/config/conf.php';
-$appPath = __DIR__ .'/app';
-$application = new Application($configPath, $appPath);
+define('CONFIG_FILE', dirname(__FILE__) . '/config/conf.php');
+define('APP_PATH', dirname(__FILE__) . '/app');
+date_default_timezone_set('Asia/Shanghai');
+require 'vendor/bot/bot-framework/src/config/classpath.php';
+$application = new Application(CONFIG_FILE, APP_PATH);
 $application->run();
 

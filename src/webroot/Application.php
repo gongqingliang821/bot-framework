@@ -1,10 +1,10 @@
 <?php
-namespace Bot\Framework\webroot;
 class Application{
     private $appPath;
-    public function __construct($configPath, $appPath){
-        require($configPath);
-        $this->appPath = $appPath;
+    public function __construct($configFile = '' , $appPath = ''){
+        $configFile = $configFile ? $configFile : WEB_PATH . '/config/conf.php';
+        $this->appPath = $appPath ? $appPath : WEB_PATH . '/app';
+        require($configFile);
     }
 
     public function run(){
