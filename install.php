@@ -1,10 +1,10 @@
 <?php
 //生成表结构
-#require ('/home/work/gongqingliang/bot-test/vendor/bot/bot-framework/src/config/classpath.php');
-define('ROOT_PATH', getcwd() . '/vendor/bot/bot-framework/src');
-require (ROOT_PATH. '/config/classpath.php');
+define ('WEB_PATH', getcwd());
+//require (getcwd() . "/vendor/autoload.php");
+require (getcwd() . "/vendor/bot/bot-framework/autoload.php");
 require (getcwd() . "/config/conf.php");
-//require ("/home/work/gongqingliang/bot-test/config/conf.php");
+require (getcwd() . "/vendor/autoload.php");
 $tables=array_slice($argv,1);
 if(!$tables){
     $tables=DBTool::showTables();

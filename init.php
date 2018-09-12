@@ -10,8 +10,8 @@ if ($retCode) {
     echo json_encode($ret);
 }
 
-$cpIndexCmd = 'cp ' . __DIR__ . '/index.php' . ' ' . getcwd();
-exec($cpIndexCmd, $ret, $retCode);
+$cpCmd = 'cp ' . __DIR__ . '/index.php' . ' ' . getcwd() . ' && cp ' . __DIR__ . '/install.php ' . getcwd();
+exec($cpCmd, $ret, $retCode);
 if ($retCode) {
     echo json_encode($ret);
 }
