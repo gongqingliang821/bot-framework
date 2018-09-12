@@ -5,7 +5,8 @@
     "keywords": ["duer","bot-framework"],
     "require": {
         "php": ">=5.4.0",
-        "dueros/bot-sdk": "^2.1"
+        "dueros/bot-sdk": "^2.1",
+        "dueros/bot-sdk": "3.1.19"
     },
     "license": "MIT",
     "authors": [
