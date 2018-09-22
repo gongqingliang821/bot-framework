@@ -1,5 +1,5 @@
 <?php
-
+namespace Bot\Framework\lib;
 trait EventEmitter{
     private $_event_map=[];
     public function trigger($eventName,$args=[]){

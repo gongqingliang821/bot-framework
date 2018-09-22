@@ -1,4 +1,5 @@
 <?php
+namespace Bot\Framework\lib;
 class Utils {
     public static function toUTF8($str) {
 		if (is_array($str)) {

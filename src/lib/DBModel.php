@@ -1,5 +1,6 @@
 <?php
-class DBModelIterator implements Iterator{
+namespace Bot\Framework\lib;
+class DBModelIterator implements \Iterator{
     private $stmt;
     private $cursor = -1;
     private $valid = true;
@@ -46,7 +47,7 @@ class DBModelIterator implements Iterator{
 abstract class DBModel{
     protected $_table;
     protected $_data;
-    use EventEmitter;
+    use \Bot\Framework\lib\EventEmitter;
     public function __construct($data=array()){
         $this->_data=$data;
     }

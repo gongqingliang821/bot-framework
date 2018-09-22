@@ -10,7 +10,7 @@ if ($retCode) {
     echo json_encode($ret);
 }
 
-$cpCmd = 'cp ' . __DIR__ . '/index.php' . ' ' . getcwd() . ' && cp ' . __DIR__ . '/install.php ' . getcwd();
+$cpCmd = 'cp ' . __DIR__ . '/index.php' . ' ' . getcwd() . ' && cp ' . __DIR__ . '/install.php ' . getcwd() . ' && cp ' . __DIR__ . '/autoload.php ' . getcwd();
 exec($cpCmd, $ret, $retCode);
 if ($retCode) {
     echo json_encode($ret);

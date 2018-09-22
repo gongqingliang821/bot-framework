@@ -1,10 +1,10 @@
 <?php
-
+namespace Bot\Framework\lib;
 class DefaultViewSetting
 {
     public static function getTemplate()
     {
-        $template = new Smarty();
+        $template = new \Smarty();
         return $template;
     }
     public static function getTemplateWithSettings(){

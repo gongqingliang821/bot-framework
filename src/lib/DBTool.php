@@ -1,4 +1,5 @@
 <?php
+namespace Bot\Framework\lib;
 class DBTool{
     public static function showTables($pPattern="",$pIndex=0){
         if(DB::getDriverName()=='sqlite'){

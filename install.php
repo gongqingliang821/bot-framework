@@ -1,10 +1,11 @@
 <?php
 //生成表结构
 define ('WEB_PATH', getcwd());
-//require (getcwd() . "/vendor/autoload.php");
-require (getcwd() . "/vendor/bot/bot-framework/autoload.php");
-require (getcwd() . "/config/conf.php");
 require (getcwd() . "/vendor/autoload.php");
+require (getcwd() . "/config/conf.php");
+use \Bot\Framework\lib\DBTool;
+use \Bot\Framework\lib\DBModel;
+use \Bot\Framework\lib\DefaultViewSetting;
 $tables=array_slice($argv,1);
 if(!$tables){
     $tables=DBTool::showTables();
@@ -26,7 +27,7 @@ foreach ($tables as $table){
     $baseModelClass=<<<END_CLASS
 <?php
 namespace {%\$namespaces%};
-use DBModel;
+use \Bot\Framework\lib\DBModel;
 class {%\$className%} extends DBModel{
 
     public function getFieldList(){

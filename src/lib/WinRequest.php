@@ -1,4 +1,5 @@
 <?php 
+namespace Bot\Framework\lib;
 class WinRequest
 {
     private static $request;

@@ -1,4 +1,5 @@
 <?php 
+namespace Bot\Framework\lib;
 class Logger {
     public static function setLevel($level = PLogger::ERROR, $options = []) {
         PLogger::get("single",$options);

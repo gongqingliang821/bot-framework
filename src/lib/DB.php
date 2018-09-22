@@ -1,4 +1,5 @@
 <?php
+namespace Bot\Framework\lib;
 class DB{
     public static function init($dsn,$username,$password,$name="root"){
         DBObject::init($dsn,$username,$password,$name);

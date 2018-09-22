@@ -1,4 +1,7 @@
 <?php
+namespace Bot\Framework\webroot;
+use Bot\Framework\lib\UrlMapper;
+use Bot\Framework\lib\WinRequest;
 class Application{
     private $appPath;
     public function __construct($configFile = '' , $appPath = ''){

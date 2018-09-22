@@ -1,4 +1,6 @@
 <?php
+namespace Bot\Framework\lib;
+use \Bot\Framework\lib\SystemException;
 class UrlMapper
 {
     private $url;

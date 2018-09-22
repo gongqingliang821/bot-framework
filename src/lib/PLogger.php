@@ -1,4 +1,5 @@
 <?php 
+namespace Bot\Framework\lib;
 class PLogger {
     //log级别 1:error 2:info 3:debug 4:print out
     private $_level;

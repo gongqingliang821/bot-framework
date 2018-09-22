@@ -1,7 +1,7 @@
 <?php
-require WEB_PATH . '/vendor/autoload.php';
-class BaseBotController extends Baidu\Duer\Botsdk\Bot
-{
+namespace Bot\Framework\lib;
+use \Baidu\Duer\Botsdk\Bot;
+class BaseBotController extends Bot {
     public function process()
     {
         $mapper = WinRequest::getAttribute("mapper");

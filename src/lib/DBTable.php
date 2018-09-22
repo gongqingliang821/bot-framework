@@ -1,4 +1,5 @@
 <?php
+namespace Bot\Framework\lib;
 class DBTable{
     protected $tableName;
     protected $cols=array();

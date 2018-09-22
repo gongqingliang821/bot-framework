@@ -1,4 +1,5 @@
 <?php
+namespace Bot\Framework\lib;
 class DBObject{
     private $dsn;
     private $username;
@@ -34,7 +35,7 @@ class DBObject{
     }
     public function getDriverName(){
         Logger::debug("getDriverName");
-        return $this->getDBH()->getAttribute(PDO::ATTR_DRIVER_NAME);
+        return $this->getDBH()->getAttribute(\PDO::ATTR_DRIVER_NAME);
     }
     private $__callbacks=[];
     public function addCallback($name,$callback){
@@ -50,8 +51,8 @@ class DBObject{
     private function getDBH(){
         if(!$this->dbh){
             try{
-                $this->dbh = new PDO($this->dsn,$this->username,$this->password);
-            } catch (PDOException $e){
+                $this->dbh = new \PDO($this->dsn,$this->username,$this->password);
+            } catch (\PDOException $e){
                 print("Error:".$e->getMessage());
                 die();
             }
@@ -111,11 +112,11 @@ class DBObject{
 
     public function query($sql){
         list($dbh,$sth)=call_user_func_array([$this,'execute_sql'],func_get_args());
-        return $sth->fetchAll( PDO::FETCH_ASSOC );
+        return $sth->fetchAll( \PDO::FETCH_ASSOC );
     }
     public function queryForCount($sql){
         list($dbh,$sth)=call_user_func_array([$this,'execute_sql'],func_get_args());
-        $res = $sth->fetch( PDO::FETCH_ASSOC );
+        $res = $sth->fetch( \PDO::FETCH_ASSOC );
         if ($res){
         	return current($res);
         }
@@ -124,7 +125,7 @@ class DBObject{
 
     public function queryForOne($sql){
         list($dbh,$sth)=call_user_func_array([$this,'execute_sql'],func_get_args());
-        return $sth->fetch( PDO::FETCH_ASSOC );
+        return $sth->fetch( \PDO::FETCH_ASSOC );
     }
 
     public function insert(){
