@@ -3,7 +3,7 @@ $configDir = getcwd() . '/config';
 if(! is_dir($configDir)){
     @mkdir($configDir, 0777, true);
 }
-$configPath = __DIR__ . '/src/config/conf.php';
+$configPath = __DIR__ . '/src/config/*';
 $cpConfigCmd = 'cp ' . $configPath . ' ' . $configDir;
 exec($cpConfigCmd, $ret, $retCode);
 if ($retCode) {

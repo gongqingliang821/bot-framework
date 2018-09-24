@@ -1,7 +1,6 @@
 <?php
 namespace Bot\Framework\lib;
-use \Exception;
-class SystemException extends Exception
+class SystemException extends \Exception
 {
     public function __construct($message, $errorCode = 500)
     {
