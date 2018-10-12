@@ -1,15 +1,22 @@
 <?php
 namespace Bot\Framework\lib;
-use \Baidu\Duer\Botsdk\Bot;
-class BaseBotController extends Bot {
+
+use \Bot\Framework\lib\Log\MLogger;
+
+class BaseBotController {
+
+
     public function process()
     {
+        register_shutdown_function(function() {
+            MLogger::getInstance()->notice();
+        });
+
         $mapper = WinRequest::getAttribute("mapper");
         $method = $mapper->getMethod();
-		
+
         try{
-            call_user_func($method);
-            return $this->run();
+            return call_user_func($method);
         } catch(Exception $e) {
             $logData = array(
                 'uri' => $_SERVER['REQUEST_URI'],
@@ -20,5 +27,5 @@ class BaseBotController extends Bot {
             throw new SystemException($e);
         }
     }
-    
+
 }

@@ -1,11 +1,8 @@
 <?php
-use \Bot\Framework\lib\Logger; 
-use \Bot\Framework\lib\PLogger;
+use \Bot\Framework\lib\Log\MLogger;
 use \Bot\Framework\lib\DB;
-ignore_user_abort(true);
 require WEB_PATH . '/autoload.php';
-define("LOG_PATH", "log/");
-Logger::setLevel(PLogger::INFO, ['level'=>PLogger::INFO,'path'=>LOG_PATH,'in_line'=>true,'file_prefix'=>'bot']);
+date_default_timezone_set('Asia/Shanghai');
 date_default_timezone_set('Asia/Shanghai');
 if(isset($_SERVER['HTTP_SAIYALOGID'])){
     define('LOG_ID', $_SERVER['HTTP_SAIYALOGID']);
@@ -14,10 +11,21 @@ if(isset($_SERVER['HTTP_SAIYALOGID'])){
 }
 DB::init("mysql:host=xx.xx.xx.xx;dbname=db_name;port=端口",'账号','密码');
 
+// 日志配置
+MLogger::getInstance(['path' => '日志路径', 'online' => true]);
+
+//redis配置信息
+define("REDIS_IP", "127.0.0.1");
+define("REDIS_PORT", 6379);
+
+define("LOG_PATH", "log/");
 
 #
 #ES config
-#
+
+define("ES_HOST", "****");
+define("ES_INDEX", "***");
+define("ES_TYPE", "***");
 #Redis config
 #
 #

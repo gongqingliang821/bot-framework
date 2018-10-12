@@ -1,5 +1,5 @@
 <?php
-namespace Bot\Framework\webroot;
+namespace Bot\Framework;
 use Bot\Framework\lib\UrlMapper;
 use Bot\Framework\lib\WinRequest;
 use Bot\Framework\lib\SystemException;
