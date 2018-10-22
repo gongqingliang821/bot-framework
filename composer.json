@@ -10,7 +10,7 @@
         "monolog/monolog": "^1.23.0",
         "predis/predis": "1.1.1",
         "php-curl-class/php-curl-class": "^8.3.2",
-        "elasticsearch/elasticsearch": "~5.0"
+        "elasticsearch/elasticsearch": "~2.0"
     },
     "license": "MIT",
     "authors": [
